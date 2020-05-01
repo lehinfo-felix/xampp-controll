@@ -14,6 +14,10 @@ echo "Olá" $(whoami)"! O que desejas fazer? | I = iniciar // E = encerrar // S 
 
 read escolha
 
+while [ $escolha != ${SAIR} ];
+
+do
+
 if [ $escolha == ${SAIR} ];
 then
 exit
@@ -33,3 +37,6 @@ echo "Encerrado com sucesso!!"
 else
 echo "insira um parâmetro válido"
 fi
+
+read escolha
+done
